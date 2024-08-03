@@ -88,7 +88,11 @@ const Home: NextPage = () => {
               handleVerify={handleVerify}
               verification_level={VerificationLevel.Orb}
             >
-              {({ open }) => <button className="btn btn-primary mt-2 w-half" onClick={open}>Verify with World ID to proof humanhood!</button>}
+              {({ open }: { open: () => void }) => (
+                <button className="btn btn-primary mt-2 w-half" onClick={open}>
+                  Verify with World ID to proof humanhood!
+                </button>
+              )}
             </IDKitWidget>
           ) : (
             <div className="px-5 w-full max-w-2xl">

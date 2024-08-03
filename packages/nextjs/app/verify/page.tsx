@@ -43,7 +43,7 @@ const Verify: NextPage = () => {
       handleVerify={handleVerify}
       verification_level={VerificationLevel.Orb}
     >
-      {({ open }) => <button onClick={open}>Verify with World ID</button>}
+      {({ open }: { open: () => void }) => <button onClick={open}>Verify with World ID</button>}
     </IDKitWidget>
   );
 };

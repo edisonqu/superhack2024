@@ -5,8 +5,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log("called api", req)
 
 	const proof = req.body
-    const app_id = process.env.NEXT_PUBLIC_APP_ID
-    const action = process.env.NEXT_PUBLIC_ACTION_ID
+    const app_id = "app_4020275d788fc6f5664d986dd931e5e6"
+    const action = process.env.NEXT_PUBLIC_ACTION_ID ?? ""
 	const verifyRes = (await verifyCloudProof(proof, app_id, action)) as IVerifyResponse
     console.log("api", app_id, action)
     if (verifyRes.success) {
@@ -18,4 +18,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Usually these errors are due to a user having already verified.
         res.status(400).send(verifyRes);
     }
-};
+}
