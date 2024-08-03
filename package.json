@@ -42,5 +42,8 @@
   },
   "engines": {
     "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "@worldcoin/idkit": "^1.2.2"
   }
 }
