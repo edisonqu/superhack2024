@@ -1,8 +1,9 @@
 ## Add .env.local!
 
+"""
 NEXT_PUBLIC_APP_ID=app_402027...
 NEXT_PUBLIC_ACTION_ID=verify
-
+"""
 
 ## instructions
 
