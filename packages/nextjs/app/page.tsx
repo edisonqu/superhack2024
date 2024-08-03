@@ -31,10 +31,10 @@ const Home: NextPage = () => {
       location: "Virtual",
       teamMembers: "William Wang, Edison Qu",
     });
-    alert("Hackathon Project imported!");
+    alert(`Hackathon Project imported from ${url}!`);
   };
 
-  const handleInputChange = e => {
+  const handleInputChange = (e: {target: {name: any; value: any;};}) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
