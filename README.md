@@ -1,3 +1,8 @@
+# Add .env.local!
+
+NEXT_PUBLIC_APP_ID=app_402027...
+NEXT_PUBLIC_ACTION_ID=verify
+
 # 🏗 Scaffold-ETH 2
 
 <h4 align="center">
