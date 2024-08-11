@@ -79,22 +79,7 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="flex items-center flex-col flex-grow pt-10">
-        {connectedAddress ? (
-          !worldcoinVerified ? (
-            <IDKitWidget
-              app_id={process.env.NEXT_PUBLIC_APP_ID!} // Note the change here
-              action={process.env.NEXT_PUBLIC_ACTION_ID!}
-              onSuccess={onSuccess}
-              handleVerify={handleVerify}
-              verification_level={VerificationLevel.Orb}
-            >
-              {({ open }: { open: () => void }) => (
-                <button className="btn btn-primary mt-2 w-half" onClick={open}>
-                  Verify with World ID to proof humanhood!
-                </button>
-              )}
-            </IDKitWidget>
-          ) : (
+        {connectedAddress ?  (
             <div className="px-5 w-full max-w-2xl">
               <h1 className="text-center mb-8">
                 <span className="block text-4xl font-bold">Hackathon NFT Minter</span>
@@ -216,7 +201,7 @@ const Home: NextPage = () => {
               </button>
             </div>
           )
-        ) : (
+         : (
           <div className="px-5 w-full max-w-2xl">
             <h1 className="text-center mb-8">
               <span className="block text-4xl font-bold">Please connect your wallet to get started!</span>
